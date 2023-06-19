@@ -15,13 +15,13 @@ export const ContactList = () => {
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
-  // const visibleContacts = contacts.filter(contact =>
-  //   contact.name.toLowerCase().includes(filter.toLowerCase())
-  // );
+  const visibleContacts = contacts.filter(contact =>
+    contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
 
-  const visibleContacts = [
-    ...contacts.filter(contact => contact.name.toLowerCase().includes(filter)),
-  ];
+  // const visibleContacts = [
+  //   ...contacts.filter(contact => contact.name.toLowerCase().includes(filter)),
+  // ];
 
   return (
     <Table>
